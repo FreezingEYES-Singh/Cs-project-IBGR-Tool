@@ -20,28 +20,6 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-local_css("style/snowflake.css")
-
-animation_symbol = "❄"
-
-st.markdown(f"""
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-    <div class="snowflake">{animation_symbol}</div>
-     """,
-    unsafe_allow_html=True
-    )
-
-def local_css(file_name):
-        with open(file_name) as f:
-            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 delete = st.empty()
 local_css("style/style.css")
 
@@ -51,7 +29,7 @@ lottie4 = load_lottieurl("https://lottie.host/592c3d29-6205-48de-b316-0c15ae3562
 
 page_by_img = """
 <style>
-[data-testid="stAppViewContainer"] >.main{    
+[data-testid="stAppViewContainer"] {    
 background-image: url("https://media.tenor.com/EVQVRTOZwaUAAAAd/wallpaper.gif");
 background-size: cover;
 background-position: top left;
@@ -106,7 +84,7 @@ selected = option_menu(
     default_index=0,
     orientation="horizontal",
     styles={
-            "container": {"padding": "0!important", "background-color": "#fafafa"},
+            "container": {"padding": "0!important", "background-color": "#000000"},
             "icon": {"color": "orange", "font-size": "25px"},
             "nav-link": {
                 "font-size": "25px",
@@ -174,15 +152,13 @@ if selected == "Home":
             
     
 if selected == "BG Remover":
-    st.balloons()
     main()
 
 if selected == "Contact":
-    st.snow()
     lottie4 = load_lottieurl("https://lottie.host/592c3d29-6205-48de-b316-0c15ae3562b0/PCtnM9bTk4.json")
     with st.container():
             st.write("---")
-            st.header("Get in touch with me!!")
+            st.header(":red[Get in touch with me!!]")
             st.write("##")
 
             contact_form = """
