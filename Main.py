@@ -4,6 +4,8 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 from pathlib import Path
 import requests
+from streamlit_extras.stylable_container import stylable_container 
+
 
 print("Hello user. If you want to use this project then save this project in a file and open command prompt .Make sure you have installed modules which are imported in this project.then in cmd write cd <location of file where you have saved this project(Main.py)> then press enter. Then type streamlit run Main.py   ")
 print("By the way this website is already deployed on internet ask the host if you don't have url")
@@ -37,6 +39,20 @@ background-repeat: no-repeat;
 background-attachment: local;
 }
 
+[data-testid="baseButton-headerNoPadding"] {
+background-image: url("https://media.tenor.com/kRxPKoDxzUgAAAAi/right-arrow.gif");
+background-size: 30px 30px;
+background-repeat: no-repeat;
+}
+
+[data-testid="baseButton-header"] {
+background-image: url("https://i.pinimg.com/originals/3d/55/da/3d55da24caab557b134ef4e76645fb83.gif");
+background-size: contain;
+background-repeat: no-repeat;
+
+}
+
+
 [data-testid="stHeader"] {
 background-color: rgba(0,0,0,0);
 }
@@ -50,6 +66,13 @@ background-image: url("https://i.pinimg.com/originals/9e/e5/00/9ee500a1c89c9f0b3
 background-size: cover;
 background-repeat: no-repeat;
 }
+
+[data-testid="baseButton-secondary"] {
+border: 5px solid #555555;
+box-shadow: 0 0 10px cyan,0 0 50px cyan;
+transition: 0.3s;
+}
+
 </style>
 """
 
@@ -162,12 +185,15 @@ if selected == "Contact":
             st.write("##")
 
             contact_form = """
-            <form action="https://formsubmit.co/manthanrauthan1@email.com" method="POST">
-                 <input type="hidden" name="_recaptcha" value="false">
-                 <input type="text" name="name" placeholder = "Your name" required>
-                 <input type="email" name="email" placeholder = "Your email address" required>
-                 <textarea name ="message" placeholder = "Your message here" required></textarea>
-                 <button type="submit">Send</button>
+            <form method="POST" action="https://formsubmit.co/manthanrauthan1@gmail.com" enctype="multipart/form-data" >
+             
+             <input type="text" name="name" placeholder="Your name" required>
+             <input type="email" name="email" placeholder="Your email" required>
+             <input type="hidden" name="_subject" value="New submission!" required>
+             <input type="hidden" name="_captcha" value="false">
+             <textarea name="message" placeholder="Your message here" required></textarea>
+             <input type="hidden" name="_template" value="table">
+             <button type="submit">Send</button>
             </form>
             """
             left_column, right_column = st.columns(2)
