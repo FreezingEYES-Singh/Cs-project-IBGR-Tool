@@ -9,7 +9,7 @@ import requests
 print("Hello user. If you want to use this project then save this project in a file and open command prompt .Make sure you have installed modules which are imported in this project.then in cmd write cd <location of file where you have saved this project(Main.py)> then press enter. Then type streamlit run Main.py   ")
 print("By the way this website is already deployed on internet ask the host if you don't have url")
 
-st.set_page_config(page_title="School Project: IBGR Tool",page_icon="👑",layout="wide")
+st.set_page_config(page_title="School Project: IBGR Tool",page_icon="❤",layout="wide")
 
 def load_lottieurl(url):
         r=requests.get(url)
