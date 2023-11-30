@@ -142,7 +142,7 @@ with st.sidebar:
     "###"
     st.title("⏩ :blue[***Important***]")
     "⭕ **You can only drop one file at a time**"
-    "⭕ **If you are in the middle of the process in removing the photo then if the website is refreshed by the user then the website will be reset to normal and the process will be breaked.**"
+    "⭕ **If you are in the middle of the process in removing the photo then if the website is refreshed by the user then the website will be reset to normal and the process will be stopped!.**"
     "⭕ **Now enjoy with no more annoying backgrounds** 😎"
     "---"
     "###"
@@ -164,8 +164,9 @@ if selected == "Home":
             
             st.header(":green[Welcome to Image Background Remover Tool] 🔰")
             "###"
-            "🟡:red[***Welcome to our Image background Remover Tool, where we transform your images effortlessly.***]"
+            "🟡:red[***Welcome to our Image background Remover Tool, where you can remove the background of any image effortlessly.***]"
             "🟡:red[***Say goodbye to distracting backgrounds and hello to BG remover.***]"
+            "🟡:red[***Now remove background of any image with ease***]"
             "🟡:red[***Simplify your creative process.***]"
             "🟡:red[***Let us take care of your content.***]"
             "🟡:red[***Try it now !!***]"
@@ -181,7 +182,7 @@ if selected == "Contact":
     lottie4 = load_lottieurl("https://lottie.host/592c3d29-6205-48de-b316-0c15ae3562b0/PCtnM9bTk4.json")
     with st.container():
             st.write("---")
-            st.header(":red[Get in touch with me!!]")
+            st.header(":red[📧 Get in touch with us!!]")
             st.write("##")
 
             contact_form = """
@@ -189,7 +190,7 @@ if selected == "Contact":
              
              <input type="text" name="name" placeholder="Your name" required>
              <input type="email" name="email" placeholder="Your email" required>
-             <input type="hidden" name="_subject" value="New submission!" required>
+             <input type="hidden" name="_subject" value="BG-Remover's viewer" required>
              <input type="hidden" name="_captcha" value="false">
              <textarea name="message" placeholder="Your message here" required></textarea>
              <input type="hidden" name="_template" value="table">
