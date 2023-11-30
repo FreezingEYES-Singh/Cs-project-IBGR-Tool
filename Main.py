@@ -4,7 +4,6 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 from pathlib import Path
 import requests
-from streamlit_extras.stylable_container import stylable_container 
 
 
 print("Hello user. If you want to use this project then save this project in a file and open command prompt .Make sure you have installed modules which are imported in this project.then in cmd write cd <location of file where you have saved this project(Main.py)> then press enter. Then type streamlit run Main.py   ")
